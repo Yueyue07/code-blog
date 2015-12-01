@@ -1,0 +1,21 @@
+header div {
+  text-align: center;
+
+}
+
+div.container {
+ margin: 20px auto;
+}
+
+header nav {
+  margin: 40px;
+}
+
+article#template p {
+  display: none;
+}
+
+article {
+  margin: 30px;
+  margin-bottom: 50px;
+}
