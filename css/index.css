@@ -2,7 +2,14 @@ header div {
   text-align: center;
 
 }
-
+p.authorInfo {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color:grey;
+}
+p.authorInfo a {
+  font-style: italic;
+}
 div.container {
  margin: 20px auto;
 }
