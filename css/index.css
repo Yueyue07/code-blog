@@ -2,6 +2,15 @@ header div {
   text-align: center;
 
 }
+nav ul li{
+  width:100%;
+  font-size: 2em;
+}
+
+div.dropdown {
+  text-align: left;
+  margin: 40px;
+}
 p.authorInfo {
   margin-top: 15px;
   margin-bottom: 15px;
@@ -18,11 +27,30 @@ header nav {
   margin: 40px;
 }
 
-article#template p {
+article#template p{
+  display: none;
+}
+
+article#template a{
   display: none;
 }
 
 article {
   margin: 30px;
   margin-bottom: 50px;
+}
+
+section {
+  display: none;
+}
+
+/*Responsive Design*/
+
+img {
+  max-width: 100%;
+}
+
+select {
+   width: 50%;
+   margin: 1% auto;
 }

@@ -1,0 +1,438 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   '-g',
+1 verbose cli   'i',
+1 verbose cli   'eslint',
+1 verbose cli   'live-server' ]
+2 info using npm@2.14.7
+3 info using node@v4.2.1
+4 verbose install initial load of /usr/local/lib/package.json
+5 verbose readDependencies loading dependencies from /usr/local/lib/package.json
+6 silly cache add args [ 'eslint', null ]
+7 verbose cache add spec eslint
+8 silly cache add args [ 'live-server', null ]
+9 verbose cache add spec live-server
+10 silly cache add parsed spec Result {
+10 silly cache add   raw: 'eslint',
+10 silly cache add   scope: null,
+10 silly cache add   name: 'eslint',
+10 silly cache add   rawSpec: '',
+10 silly cache add   spec: '*',
+10 silly cache add   type: 'range' }
+11 silly addNamed eslint@*
+12 verbose addNamed "*" is a valid semver range for eslint
+13 silly addNameRange { name: 'eslint', range: '*', hasData: false }
+14 silly mapToRegistry name eslint
+15 silly mapToRegistry using default registry
+16 silly mapToRegistry registry https://registry.npmjs.org/
+17 silly mapToRegistry uri https://registry.npmjs.org/eslint
+18 verbose addNameRange registry:https://registry.npmjs.org/eslint not in flight; fetching
+19 silly cache add parsed spec Result {
+19 silly cache add   raw: 'live-server',
+19 silly cache add   scope: null,
+19 silly cache add   name: 'live-server',
+19 silly cache add   rawSpec: '',
+19 silly cache add   spec: '*',
+19 silly cache add   type: 'range' }
+20 silly addNamed live-server@*
+21 verbose addNamed "*" is a valid semver range for live-server
+22 silly addNameRange { name: 'live-server', range: '*', hasData: false }
+23 silly mapToRegistry name live-server
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry uri https://registry.npmjs.org/live-server
+27 verbose addNameRange registry:https://registry.npmjs.org/live-server not in flight; fetching
+28 verbose request uri https://registry.npmjs.org/live-server
+29 verbose request no auth needed
+30 info attempt registry request try #1 at 1:30:54 PM
+31 verbose request id 91744f56710721da
+32 verbose etag "8LKS7RI6F67NQ303ZOU40GPHH"
+33 http request GET https://registry.npmjs.org/live-server
+34 verbose request uri https://registry.npmjs.org/eslint
+35 verbose request no auth needed
+36 info attempt registry request try #1 at 1:30:54 PM
+37 verbose etag "9YKHS5ARL6WME2TMTR0JYK6MD"
+38 http request GET https://registry.npmjs.org/eslint
+39 http 304 https://registry.npmjs.org/eslint
+40 verbose headers { date: 'Tue, 01 Dec 2015 21:30:54 GMT',
+40 verbose headers   via: '1.1 varnish',
+40 verbose headers   'cache-control': 'max-age=60',
+40 verbose headers   etag: '"9YKHS5ARL6WME2TMTR0JYK6MD"',
+40 verbose headers   age: '46',
+40 verbose headers   connection: 'keep-alive',
+40 verbose headers   'x-served-by': 'cache-sjc3124-SJC',
+40 verbose headers   'x-cache': 'HIT',
+40 verbose headers   'x-cache-hits': '2',
+40 verbose headers   'x-timer': 'S1449005454.614732,VS0,VE0',
+40 verbose headers   vary: 'Accept' }
+41 silly get cb [ 304,
+41 silly get   { date: 'Tue, 01 Dec 2015 21:30:54 GMT',
+41 silly get     via: '1.1 varnish',
+41 silly get     'cache-control': 'max-age=60',
+41 silly get     etag: '"9YKHS5ARL6WME2TMTR0JYK6MD"',
+41 silly get     age: '46',
+41 silly get     connection: 'keep-alive',
+41 silly get     'x-served-by': 'cache-sjc3124-SJC',
+41 silly get     'x-cache': 'HIT',
+41 silly get     'x-cache-hits': '2',
+41 silly get     'x-timer': 'S1449005454.614732,VS0,VE0',
+41 silly get     vary: 'Accept' } ]
+42 verbose etag https://registry.npmjs.org/eslint from cache
+43 verbose get saving eslint to /Users/Q_X/.npm/registry.npmjs.org/eslint/.cache.json
+44 silly addNameRange number 2 { name: 'eslint', range: '*', hasData: true }
+45 silly addNameRange versions [ 'eslint',
+45 silly addNameRange   [ '0.0.4',
+45 silly addNameRange     '0.0.5',
+45 silly addNameRange     '0.0.6',
+45 silly addNameRange     '0.0.7',
+45 silly addNameRange     '0.1.0-dev',
+45 silly addNameRange     '0.1.0',
+45 silly addNameRange     '0.1.1',
+45 silly addNameRange     '0.1.2',
+45 silly addNameRange     '0.1.3',
+45 silly addNameRange     '0.1.4',
+45 silly addNameRange     '0.2.0',
+45 silly addNameRange     '0.3.0',
+45 silly addNameRange     '0.4.0',
+45 silly addNameRange     '0.4.1',
+45 silly addNameRange     '0.4.2',
+45 silly addNameRange     '0.4.3',
+45 silly addNameRange     '0.4.4',
+45 silly addNameRange     '0.4.5',
+45 silly addNameRange     '0.5.0',
+45 silly addNameRange     '0.5.1',
+45 silly addNameRange     '0.6.0',
+45 silly addNameRange     '0.6.1',
+45 silly addNameRange     '0.6.2',
+45 silly addNameRange     '0.7.1',
+45 silly addNameRange     '0.7.2',
+45 silly addNameRange     '0.7.3',
+45 silly addNameRange     '0.7.4',
+45 silly addNameRange     '0.8.0',
+45 silly addNameRange     '0.8.1',
+45 silly addNameRange     '0.8.2',
+45 silly addNameRange     '0.9.0',
+45 silly addNameRange     '0.9.1',
+45 silly addNameRange     '0.9.2',
+45 silly addNameRange     '0.10.0-alpha',
+45 silly addNameRange     '0.10.0-alpha.1',
+45 silly addNameRange     '0.10.0-alpha.2',
+45 silly addNameRange     '0.10.0',
+45 silly addNameRange     '0.11.0-alpha.0',
+45 silly addNameRange     '0.10.1',
+45 silly addNameRange     '0.10.2',
+45 silly addNameRange     '0.11.0',
+45 silly addNameRange     '0.12.0',
+45 silly addNameRange     '0.13.0',
+45 silly addNameRange     '0.14.0',
+45 silly addNameRange     '0.14.1',
+45 silly addNameRange     '0.15.0',
+45 silly addNameRange     '0.15.1',
+45 silly addNameRange     '0.16.0',
+45 silly addNameRange     '0.16.1',
+45 silly addNameRange     '0.16.2',
+45 silly addNameRange     '0.17.0',
+45 silly addNameRange     '0.17.1',
+45 silly addNameRange     '0.18.0',
+45 silly addNameRange     '0.19.0',
+45 silly addNameRange     '0.20.0',
+45 silly addNameRange     '0.21.0',
+45 silly addNameRange     '0.21.1',
+45 silly addNameRange     '0.21.2',
+45 silly addNameRange     '0.22.0',
+45 silly addNameRange     '0.22.1',
+45 silly addNameRange     '0.23.0',
+45 silly addNameRange     '0.24.0',
+45 silly addNameRange     '0.24.1',
+45 silly addNameRange     '1.0.0-rc-1',
+45 silly addNameRange     '1.0.0-rc-2',
+45 silly addNameRange     '1.0.0-rc-3',
+45 silly addNameRange     '1.0.0',
+45 silly addNameRange     '1.1.0',
+45 silly addNameRange     '1.2.0',
+45 silly addNameRange     '1.2.1',
+45 silly addNameRange     '1.3.0',
+45 silly addNameRange     '1.3.1',
+45 silly addNameRange     '1.4.0',
+45 silly addNameRange     '1.4.1',
+45 silly addNameRange     '1.4.2',
+45 silly addNameRange     '1.4.3',
+45 silly addNameRange     '1.5.0',
+45 silly addNameRange     '1.5.1',
+45 silly addNameRange     '1.6.0',
+45 silly addNameRange     '1.7.0',
+45 silly addNameRange     '1.7.1',
+45 silly addNameRange     '1.7.2',
+45 silly addNameRange     '1.7.3',
+45 silly addNameRange     '1.8.0',
+45 silly addNameRange     '1.9.0',
+45 silly addNameRange     '1.10.0',
+45 silly addNameRange     '1.10.1',
+45 silly addNameRange     '1.10.2',
+45 silly addNameRange     '1.10.3' ] ]
+46 silly addNamed eslint@1.10.3
+47 verbose addNamed "1.10.3" is a plain semver version for eslint
+48 silly cache afterAdd eslint@1.10.3
+49 verbose afterAdd /Users/Q_X/.npm/eslint/1.10.3/package/package.json not in flight; writing
+50 verbose afterAdd /Users/Q_X/.npm/eslint/1.10.3/package/package.json written
+51 http 304 https://registry.npmjs.org/live-server
+52 verbose headers { date: 'Tue, 01 Dec 2015 21:30:54 GMT',
+52 verbose headers   via: '1.1 varnish',
+52 verbose headers   'cache-control': 'max-age=60',
+52 verbose headers   etag: '"8LKS7RI6F67NQ303ZOU40GPHH"',
+52 verbose headers   age: '0',
+52 verbose headers   connection: 'keep-alive',
+52 verbose headers   'x-served-by': 'cache-sjc3128-SJC',
+52 verbose headers   'x-cache': 'HIT',
+52 verbose headers   'x-cache-hits': '1',
+52 verbose headers   'x-timer': 'S1449005454.613778,VS0,VE44',
+52 verbose headers   vary: 'Accept' }
+53 silly get cb [ 304,
+53 silly get   { date: 'Tue, 01 Dec 2015 21:30:54 GMT',
+53 silly get     via: '1.1 varnish',
+53 silly get     'cache-control': 'max-age=60',
+53 silly get     etag: '"8LKS7RI6F67NQ303ZOU40GPHH"',
+53 silly get     age: '0',
+53 silly get     connection: 'keep-alive',
+53 silly get     'x-served-by': 'cache-sjc3128-SJC',
+53 silly get     'x-cache': 'HIT',
+53 silly get     'x-cache-hits': '1',
+53 silly get     'x-timer': 'S1449005454.613778,VS0,VE44',
+53 silly get     vary: 'Accept' } ]
+54 verbose etag https://registry.npmjs.org/live-server from cache
+55 verbose get saving live-server to /Users/Q_X/.npm/registry.npmjs.org/live-server/.cache.json
+56 silly addNameRange number 2 { name: 'live-server', range: '*', hasData: true }
+57 silly addNameRange versions [ 'live-server',
+57 silly addNameRange   [ '0.1.0',
+57 silly addNameRange     '0.1.1',
+57 silly addNameRange     '0.2.0',
+57 silly addNameRange     '0.3.0',
+57 silly addNameRange     '0.4.0',
+57 silly addNameRange     '0.5.0',
+57 silly addNameRange     '0.6.0',
+57 silly addNameRange     '0.6.1',
+57 silly addNameRange     '0.6.2',
+57 silly addNameRange     '0.6.3',
+57 silly addNameRange     '0.6.4',
+57 silly addNameRange     '0.7.0',
+57 silly addNameRange     '0.7.1',
+57 silly addNameRange     '0.8.0',
+57 silly addNameRange     '0.8.1',
+57 silly addNameRange     '0.8.2' ] ]
+58 silly addNamed live-server@0.8.2
+59 verbose addNamed "0.8.2" is a plain semver version for live-server
+60 silly cache afterAdd live-server@0.8.2
+61 verbose afterAdd /Users/Q_X/.npm/live-server/0.8.2/package/package.json not in flight; writing
+62 verbose afterAdd /Users/Q_X/.npm/live-server/0.8.2/package/package.json written
+63 silly install resolved [ { name: 'eslint',
+63 silly install resolved     version: '1.10.3',
+63 silly install resolved     author:
+63 silly install resolved      { name: 'Nicholas C. Zakas',
+63 silly install resolved        email: 'nicholas+npm@nczconsulting.com' },
+63 silly install resolved     description: 'An AST-based pattern checker for JavaScript.',
+63 silly install resolved     bin: { eslint: './bin/eslint.js' },
+63 silly install resolved     main: './lib/api.js',
+63 silly install resolved     scripts:
+63 silly install resolved      { test: 'node Makefile.js test',
+63 silly install resolved        lint: 'node Makefile.js lint',
+63 silly install resolved        patch: 'node Makefile.js patch',
+63 silly install resolved        minor: 'node Makefile.js minor',
+63 silly install resolved        major: 'node Makefile.js major',
+63 silly install resolved        docs: 'node Makefile.js docs',
+63 silly install resolved        gensite: 'node Makefile.js gensite',
+63 silly install resolved        browserify: 'node Makefile.js browserify',
+63 silly install resolved        perf: 'node Makefile.js perf',
+63 silly install resolved        profile: 'beefy tests/bench/bench.js --open -- -t brfs -t ./tests/bench/xform-rules.js -r espree',
+63 silly install resolved        coveralls: 'cat ./coverage/lcov.info | coveralls',
+63 silly install resolved        'check-commit': 'node Makefile.js checkGitCommit' },
+63 silly install resolved     files: [ 'LICENSE', 'README.md', 'bin', 'conf', 'lib' ],
+63 silly install resolved     repository: { type: 'git', url: 'git+https://github.com/eslint/eslint.git' },
+63 silly install resolved     homepage: 'http://eslint.org',
+63 silly install resolved     bugs: { url: 'https://github.com/eslint/eslint/issues/' },
+63 silly install resolved     dependencies:
+63 silly install resolved      { chalk: '^1.0.0',
+63 silly install resolved        'concat-stream': '^1.4.6',
+63 silly install resolved        debug: '^2.1.1',
+63 silly install resolved        doctrine: '^0.7.1',
+63 silly install resolved        'escape-string-regexp': '^1.0.2',
+63 silly install resolved        escope: '^3.3.0',
+63 silly install resolved        espree: '^2.2.4',
+63 silly install resolved        estraverse: '^4.1.1',
+63 silly install resolved        'estraverse-fb': '^1.3.1',
+63 silly install resolved        esutils: '^2.0.2',
+63 silly install resolved        'file-entry-cache': '^1.1.1',
+63 silly install resolved        glob: '^5.0.14',
+63 silly install resolved        globals: '^8.11.0',
+63 silly install resolved        handlebars: '^4.0.0',
+63 silly install resolved        inquirer: '^0.11.0',
+63 silly install resolved        'is-my-json-valid': '^2.10.0',
+63 silly install resolved        'is-resolvable': '^1.0.0',
+63 silly install resolved        'js-yaml': '3.4.5',
+63 silly install resolved        'json-stable-stringify': '^1.0.0',
+63 silly install resolved        'lodash.clonedeep': '^3.0.1',
+63 silly install resolved        'lodash.merge': '^3.3.2',
+63 silly install resolved        'lodash.omit': '^3.1.0',
+63 silly install resolved        minimatch: '^3.0.0',
+63 silly install resolved        mkdirp: '^0.5.0',
+63 silly install resolved        'object-assign': '^4.0.1',
+63 silly install resolved        optionator: '^0.6.0',
+63 silly install resolved        'path-is-absolute': '^1.0.0',
+63 silly install resolved        'path-is-inside': '^1.0.1',
+63 silly install resolved        shelljs: '^0.5.3',
+63 silly install resolved        'strip-json-comments': '~1.0.1',
+63 silly install resolved        'text-table': '~0.2.0',
+63 silly install resolved        'user-home': '^2.0.0',
+63 silly install resolved        'xml-escape': '~1.0.0' },
+63 silly install resolved     devDependencies:
+63 silly install resolved      { beefy: '^1.0.0',
+63 silly install resolved        brfs: '0.0.9',
+63 silly install resolved        browserify: '^12.0.1',
+63 silly install resolved        chai: '^3.4.0',
+63 silly install resolved        cheerio: '^0.19.0',
+63 silly install resolved        coveralls: '2.11.4',
+63 silly install resolved        dateformat: '^1.0.8',
+63 silly install resolved        ejs: '^2.3.3',
+63 silly install resolved        esprima: '^2.4.1',
+63 silly install resolved        'esprima-fb': '^15001.1001.0-dev-harmony-fb',
+63 silly install resolved        'gh-got': '^2.2.0',
+63 silly install resolved        istanbul: '^0.4.0',
+63 silly install resolved        jsdoc: '^3.3.0-beta1',
+63 silly install resolved        jsonlint: '^1.6.2',
+63 silly install resolved        leche: '^2.1.1',
+63 silly install resolved        linefix: '^0.1.1',
+63 silly install resolved        'load-perf': '^0.2.0',
+63 silly install resolved        markdownlint: '^0.0.8',
+63 silly install resolved        mocha: '^2.1.0',
+63 silly install resolved        'mocha-phantomjs': '4.0.1',
+63 silly install resolved        'npm-license': '^0.3.1',
+63 silly install resolved        phantomjs: '1.9.18',
+63 silly install resolved        proxyquire: '^1.0.0',
+63 silly install resolved        rewire: '^2.3.4',
+63 silly install resolved        semver: '^5.0.3',
+63 silly install resolved        'shelljs-nodecli': '~0.1.0',
+63 silly install resolved        sinon: '1.17.2',
+63 silly install resolved        through: '^2.3.6' },
+63 silly install resolved     keywords: [ 'ast', 'lint', 'javascript', 'ecmascript', 'espree' ],
+63 silly install resolved     license: 'MIT',
+63 silly install resolved     engines: { node: '>=0.10' },
+63 silly install resolved     gitHead: '2436cc6c1816a7890e35dab38e609daee84d7530',
+63 silly install resolved     _id: 'eslint@1.10.3',
+63 silly install resolved     _shasum: 'fb19a91b13c158082bbca294b17d979bc8353a0a',
+63 silly install resolved     _from: 'eslint@*',
+63 silly install resolved     _npmVersion: '1.4.28',
+63 silly install resolved     _npmUser: { name: 'nzakas', email: 'nicholas@nczconsulting.com' },
+63 silly install resolved     maintainers: [ [Object], [Object] ],
+63 silly install resolved     dist:
+63 silly install resolved      { shasum: 'fb19a91b13c158082bbca294b17d979bc8353a0a',
+63 silly install resolved        tarball: 'http://registry.npmjs.org/eslint/-/eslint-1.10.3.tgz' },
+63 silly install resolved     directories: {},
+63 silly install resolved     _resolved: 'https://registry.npmjs.org/eslint/-/eslint-1.10.3.tgz',
+63 silly install resolved     readme: 'ERROR: No README data found!' },
+63 silly install resolved   { name: 'live-server',
+63 silly install resolved     version: '0.8.2',
+63 silly install resolved     description: 'simple development http server with live reload capability',
+63 silly install resolved     keywords: [ 'front-end', 'development', 'tool', 'server', 'http', 'cli' ],
+63 silly install resolved     author: { name: 'Tapio Vierros' },
+63 silly install resolved     dependencies:
+63 silly install resolved      { colors: 'latest',
+63 silly install resolved        connect: '2.x.x',
+63 silly install resolved        'event-stream': 'latest',
+63 silly install resolved        'faye-websocket': '0.9.x',
+63 silly install resolved        'object-assign': '^2.0.0',
+63 silly install resolved        opn: 'latest',
+63 silly install resolved        send: 'latest',
+63 silly install resolved        watchr: '2.3.x' },
+63 silly install resolved     scripts: { test: 'jshint *.js; eslint *.js' },
+63 silly install resolved     bin: { 'live-server': './live-server.js' },
+63 silly install resolved     repository:
+63 silly install resolved      { type: 'git',
+63 silly install resolved        url: 'git+https://github.com/tapio/live-server.git' },
+63 silly install resolved     engines: { node: '>=0.8.0' },
+63 silly install resolved     preferGlobal: true,
+63 silly install resolved     license: 'MIT',
+63 silly install resolved     eslintConfig: { env: [Object], rules: [Object] },
+63 silly install resolved     gitHead: '4884f342dc48b4b093a9571bdca03bf664a6160a',
+63 silly install resolved     bugs: { url: 'https://github.com/tapio/live-server/issues' },
+63 silly install resolved     _id: 'live-server@0.8.2',
+63 silly install resolved     _shasum: '3c6a0b05591585866c99c71c4853633bf01944ff',
+63 silly install resolved     _from: 'live-server@*',
+63 silly install resolved     _npmVersion: '1.4.21',
+63 silly install resolved     _npmUser: { name: 'tapio', email: 'tapiovierros@gmail.com' },
+63 silly install resolved     maintainers: [ [Object] ],
+63 silly install resolved     dist:
+63 silly install resolved      { shasum: '3c6a0b05591585866c99c71c4853633bf01944ff',
+63 silly install resolved        tarball: 'http://registry.npmjs.org/live-server/-/live-server-0.8.2.tgz' },
+63 silly install resolved     directories: {},
+63 silly install resolved     _resolved: 'https://registry.npmjs.org/live-server/-/live-server-0.8.2.tgz',
+63 silly install resolved     readme: 'ERROR: No README data found!',
+63 silly install resolved     homepage: 'https://github.com/tapio/live-server#readme' } ]
+64 info install eslint@1.10.3 into /usr/local/lib
+65 info install live-server@0.8.2 into /usr/local/lib
+66 info installOne eslint@1.10.3
+67 verbose installOne of eslint to /usr/local/lib not in flight; installing
+68 info installOne live-server@0.8.2
+69 verbose installOne of live-server to /usr/local/lib not in flight; installing
+70 verbose lock using /Users/Q_X/.npm/_locks/eslint-73063478b74e4f91.lock for /usr/local/lib/node_modules/eslint
+71 verbose lock using /Users/Q_X/.npm/_locks/live-server-1932c27c2adeb129.lock for /usr/local/lib/node_modules/live-server
+72 silly install write writing eslint 1.10.3 to /usr/local/lib/node_modules/eslint
+73 silly install write writing live-server 0.8.2 to /usr/local/lib/node_modules/live-server
+74 verbose unbuild lib/node_modules/eslint
+75 verbose unbuild lib/node_modules/live-server
+76 silly gentlyRm /usr/local/lib/node_modules/eslint is being purged from base /usr/local
+77 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/eslint
+78 verbose tar unpack /Users/Q_X/.npm/eslint/1.10.3/package.tgz
+79 verbose tar unpacking to /usr/local/lib/node_modules/eslint
+80 silly gentlyRm /usr/local/lib/node_modules/eslint is being purged
+81 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/eslint
+82 silly gentlyRm /usr/local/lib/node_modules/live-server is being purged from base /usr/local
+83 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/live-server
+84 silly gunzTarPerm modes [ '755', '644' ]
+85 verbose tar unpack /Users/Q_X/.npm/live-server/0.8.2/package.tgz
+86 verbose tar unpacking to /usr/local/lib/node_modules/live-server
+87 silly gentlyRm /usr/local/lib/node_modules/live-server is being purged
+88 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/live-server
+89 silly gunzTarPerm modes [ '755', '644' ]
+90 error tar.unpack untar error /Users/Q_X/.npm/eslint/1.10.3/package.tgz
+91 error tar.unpack untar error /Users/Q_X/.npm/live-server/0.8.2/package.tgz
+92 verbose unlock done using /Users/Q_X/.npm/_locks/eslint-73063478b74e4f91.lock for /usr/local/lib/node_modules/eslint
+93 verbose unlock done using /Users/Q_X/.npm/_locks/live-server-1932c27c2adeb129.lock for /usr/local/lib/node_modules/live-server
+94 verbose fstream_path /usr/local/lib/node_modules/eslint
+95 verbose fstream_type Directory
+96 verbose fstream_class DirWriter
+97 verbose stack Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/eslint'
+97 verbose stack     at Error (native)
+98 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25
+98 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53
+98 verbose fstream_stack FSReqWrap.oncomplete (fs.js:82:15)
+99 verbose cwd /Users/Q_X/Desktop/code301/project/code-blog
+100 error Darwin 14.5.0
+101 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "-g" "i" "eslint" "live-server"
+102 error node v4.2.1
+103 error npm  v2.14.7
+104 error path /usr/local/lib/node_modules/eslint
+105 error code EACCES
+106 error errno -13
+107 error syscall mkdir
+108 error Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/eslint'
+108 error     at Error (native)
+108 error  { [Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/eslint']
+108 error   errno: -13,
+108 error   code: 'EACCES',
+108 error   syscall: 'mkdir',
+108 error   path: '/usr/local/lib/node_modules/eslint',
+108 error   fstream_type: 'Directory',
+108 error   fstream_path: '/usr/local/lib/node_modules/eslint',
+108 error   fstream_class: 'DirWriter',
+108 error   fstream_stack:
+108 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25',
+108 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53',
+108 error      'FSReqWrap.oncomplete (fs.js:82:15)' ] }
+109 error Please try running this command again as root/Administrator.
+110 verbose exit [ -13, true ]
+111 verbose unbuild lib/node_modules/eslint
+112 silly gentlyRm /usr/local/lib/node_modules/eslint is being purged from base /usr/local
+113 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/eslint
+114 verbose unbuild lib/node_modules/live-server
+115 silly gentlyRm /usr/local/lib/node_modules/live-server is being purged from base /usr/local
+116 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/live-server
