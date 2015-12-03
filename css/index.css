@@ -2,8 +2,6 @@ header div {
   text-align: center;
 
 }
-<<<<<<< HEAD
-=======
 nav ul li{
   width:100%;
   font-size: 2em;
@@ -17,7 +15,6 @@ div.dropdown {
   text-align: left;
   margin: 40px;
 }
->>>>>>> class-02
 p.authorInfo {
   margin-top: 15px;
   margin-bottom: 15px;
@@ -34,15 +31,11 @@ header nav {
   margin: 40px;
 }
 
-<<<<<<< HEAD
-article#template p {
-=======
 article#template p{
   display: none;
 }
 
 article#template a{
->>>>>>> class-02
   display: none;
 }
 
@@ -50,8 +43,6 @@ article {
   margin: 30px;
   margin-bottom: 50px;
 }
-<<<<<<< HEAD
-=======
 
 section {
   display: none;
@@ -67,4 +58,3 @@ select {
    width: 50%;
    margin: 1% auto;
 }
->>>>>>> class-02
