@@ -26,13 +26,3 @@ blog.createContent = function(){
     }
 
 }
-
-
-
-
-$(document).ready(function(){
-  blog.sortRawData();
-  blog.createContent();
-
-
-});

@@ -23,7 +23,8 @@ Article.prototype.toHTML = function () {
     $articleTemplate.find('.title').html(this.title);
     // insert author
     $articleTemplate.find('.author').html(this.author);
-
+    //insert category
+    $articleTemplate.find('.cat').html(this.category);
     //past date
     var pastdate = new Date(this.publishedOn);
     var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
