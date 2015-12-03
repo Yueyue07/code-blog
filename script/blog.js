@@ -1,5 +1,8 @@
 var blog = {};
+<<<<<<< HEAD
 
+=======
+>>>>>>> class-02
 blog.rawData = [
   {
     title:       'Bacon Ipsum',
