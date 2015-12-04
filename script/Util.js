@@ -56,6 +56,15 @@ util.about = function() {
   });
 }
 
+util.hambMenu = function() {
+  $('button').click(function(){
+
+    $('nav').toggle()
+    $('div.container h1').css('text-align','center');
+  });
+
+}
+
 $(document).ready(function(){
   blog.sortRawData();
   blog.createContent();
@@ -63,4 +72,5 @@ $(document).ready(function(){
   util.truncateArticles();
   util.findAuthorArticleList();
   util.findCategoryList();
+  util.hambMenu();
 });

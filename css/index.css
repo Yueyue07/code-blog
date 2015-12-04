@@ -1,63 +1,13 @@
-/*header div {
-  text-align: center;
 
-}
-nav ul li{
-  width:100%;
-  font-size: 2em;
-}
-main article p.cat {
-  font-size: 1em;
-  color:red;
-  font-weight: bold;
-}
-div.dropdown {
-  text-align: left;
-  margin: 40px;
-}
-p.authorInfo {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  color:grey;
-}
-p.authorInfo a {
-  font-style: italic;
-}
-div.container {
- margin: 20px auto;
-}
-
-header nav {
-  margin: 40px;
-}
-
-article#template p{
-  display: none;
-}
-
-article#template a{
-  display: none;
-}
-
-article {
-  margin: 30px;
-  margin-bottom: 50px;
-}
-
-section {
-  display: none;
-}*/
-
-/*Responsive Design*/
 
 img {
   max-width: 100%;
 }
 
-select {
+/*select {
    width: 50%;
    margin: 1% auto;
-}
+}*/
 
 section {
   display: none;
@@ -71,26 +21,61 @@ article#template a{
     display: none;
 }
 
+header div {
+  text-align: center;
 
+}
+
+/*button {
+  position: relative;
+  top:350px;
+  float:left;
+}*/
+
+nav.menu {
+  position:relative;
+  top:350px;
+  margin-bottom: 5px;
+}
+.row {
+    margin-top: 3%;
+}
+
+select {
+  font-size:1em;
+  width:40%;
+
+  border: 1px solid black;
+  padding: 5px;
+
+  line-height: 1;
+  border: 1px solid black;
+  border-radius: 2px;
+
+}
+
+button {
+  display:inline-block;
+}
+nav {
+  display: inline-block;
+}
+div.menu{
+ float:left;
+}
 
 @media screen and (min-width: 600px) {
- header {
-   border: 1px solid black;
- }
-  select {
+  /*select {
     border: 1px solid black;
     position:relative;
     left:20%;
 
-  }
+  }*/
   header div {
     text-align: center;
 
   }
-  nav ul li{
-    width:100%;
-    font-size: 2em;
-  }
+
   main article p.cat {
     font-size: 1em;
     color:red;
@@ -110,10 +95,7 @@ article#template a{
   }
   div.container {
    margin: 20px auto;
-  }
-
-  header nav {
-    margin: 40px;
+   clear:both;
   }
 
   article#template p{
@@ -133,5 +115,42 @@ article#template a{
     display: none;
   }
 
+  /*button {
+    position: relative;
+    top:350px;
+    float:left;
+  }*/
+  nav.menu {
+    position:relative;
+    top:350px;
+    margin-bottom: 5px;
+  }
+
+  select {
+    font-size:1em;
+    width:40%;
+
+    border: 1px solid black;
+    padding: 5px;
+
+    line-height: 1;
+    border: 1px solid black;
+    border-radius: 2px;
+
+  }
+
+  .row {
+      margin-top: 3%;
+  }
+
+  button {
+    display:inline-block;
+  }
+  nav {
+    display: inline-block;
+  }
+  div.menu{
+   float:left;
+  }
 
 }

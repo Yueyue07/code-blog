@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
       <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="css/normalize.css">
+      <link rel="stylesheet" type="text/css" href="css/base.css">
+      <link rel="stylesheet" type="text/css" href="css/layout.css">
       <link rel="stylesheet" type="text/css" href="css/index.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
       <script src="script/blog.js"></script>
@@ -16,26 +20,43 @@
   </head>
   <body>
     <header>
-      <div class="container">
-          <h1>Yueyue Qin's Blog</h1>
-          <p>You will love the post articles of this page. </p>
+      <div class="head">
+        <div class='menu'>
+            <button><i class="fa fa-bars"></i></button>
+            <nav style="display:none">
+              <ul class="nav nav-pills">
+                 <li role="presentation"><a href="index.html"><i class="fa fa-home fa-fw"></i>&nbsp; Home</a></li>
+                 <li role="presentation" id="about"><a href="index.html"><i class="fa fa-user"></i>&nbsp; About</a></li>
+                 <li role="presentation"><a href="https://github.com/Yueyue07"><i class="fa fa-github"></i>&nbsp; Github</a></li>
+                 <li role="presentation"><a href="https://www.linkedin.com/profile/view?id=AAMAAAzN520B-kb4dEtUz6j-N0f0bitN6UPq9UA&trk=hp-identity-photo"><i class="fa fa-linkedin"></i>&nbsp; Linkedin</a></li>
+              </ul>
+            </nav>
+       </div>
+          <div class="container">
+             <h1>Yueyue Qin's Blog</h1>
+             <p>You will love the post articles of this page. </p>
+          </div>
       </div>
-      <nav>
-        <ul class="nav nav-pills">
-           <li role="presentation"><a href="index.html"><i class="fa fa-home fa-fw"></i>&nbsp;Home</a></li>
-           <li role="presentation" id="about"><a href="index.html"><i class="fa fa-user"></i>&nbsp; About</a></li>
-           <li role="presentation"><a href="https://github.com/Yueyue07"><i class="fa fa-github"></i>&nbsp; Github</a></li>
-           <li role="presentation"><a href="https://www.linkedin.com/profile/view?id=AAMAAAzN520B-kb4dEtUz6j-N0f0bitN6UPq9UA&trk=hp-identity-photo"><i class="fa fa-linkedin"></i>&nbsp; Linkedin</a></li>
-        </ul>
-      </nav>
-      <select class="authorList">
-          <option value="" >--Filter By Author--</option>
 
+      <div class="row">
+        <div class="col-md-6">
+           <select class="authorList">
+                  <option value="" >--Filter By Author--</option>
+              </select>
+        </div>
+        <div class="col-md-6">
+          <select class="catList">
+            <option value="" >--Filter By Category--</option>
+         </select>
+      </div>
+      </div>
+      <!-- <select class="authorList">
+          <option value="" >--Filter By Author--</option>
       </select>
       <select class="catList">
           <option value="" >--Filter By Category--</option>
 
-      </select>
+      </select> -->
   </header>
   <main>
     <article id="template" data-author='' data-category=''>
