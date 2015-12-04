@@ -63,4 +63,6 @@ $(document).ready(function(){
   util.truncateArticles();
   util.findAuthorArticleList();
   util.findCategoryList();
+
+
 });
