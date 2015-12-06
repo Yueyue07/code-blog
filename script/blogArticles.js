@@ -18,8 +18,8 @@ blog.sortRawData = function(){
 blog.createContent = function(){
 
     for (var i =0; i <blog.rawData.length; i++){
-      var article = new Article(this.rawData[i],i);
-      article.toHTML();
+      // var article = new Article(this.rawData[i],i);
+      // article.toHTML();
 
       var filterlist = new Filterlist(this.rawData[i]);
       filterlist.toHTML();

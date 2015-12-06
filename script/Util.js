@@ -27,8 +27,12 @@ util.findAuthorArticleList=function() {
         //   }
         // );
         str = $('select.authorList option:selected').text();
-        $('main').find('article[data-author!="'+str+'"]').hide();
-
+        if (str === "--Filter By Author--"){
+          $('main').fadeIn('slow');
+        }else{
+          $('main').find('article[data-author!="'+str+'"]').hide();
+          $('select.catList option').first().attr('selected','selected');
+        }
     });
 
 }
@@ -41,7 +45,13 @@ util.findCategoryList = function() {
   $('select.catList').change(function(){
     var str='';
     var str = $('select.catList option:selected').text();
-    $('main').find('article[data-category!="'+str+'"]').hide();
+    if (str === "--Filter By Category--"){
+      $('main').fadeIn('slow');
+    }else{
+      $('main').find('article[data-category!="'+str+'"]').hide();
+      $('select.authorList option').first().attr('selected','selected');
+    }
+
   });
 }
 
@@ -68,6 +78,9 @@ util.hambMenu = function() {
 $(document).ready(function(){
   blog.sortRawData();
   blog.createContent();
+  articleTempl.JSONformat();
+  articleTempl.handlerTemplate();
+
   util.about();
   util.truncateArticles();
   util.findAuthorArticleList();

@@ -3,6 +3,7 @@
   <head>
       <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
       <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"> </script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
       <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -15,6 +16,7 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
       <script src="script/blog.js"></script>
       <script src="script/article.js"></script>
+      <script src="script/articleHdbrTemp.js"></script>
       <script src="script/FilterList.js"></script>
       <script src="script/blogArticles.js"></script>
       <script src="script/Util.js"></script>
@@ -42,12 +44,12 @@
       <div class="row">
         <div class="col-md-6">
            <select class="authorList">
-                  <option value="" >--Filter By Author--</option>
-              </select>
+                  <option value="" class="default" >--Filter By Author--</option>
+           </select>
         </div>
         <div class="col-md-6">
           <select class="catList">
-            <option value="" >--Filter By Category--</option>
+            <option value="" class="default" >--Filter By Category--</option>
          </select>
       </div>
       </div>
@@ -59,7 +61,7 @@
 
       </select> -->
   </header>
-  <main>
+  <!-- <main>
     <article id="template" data-author='' data-category=''>
       <h1 class="title"></h1>
       <p class="authorInfo">By
@@ -75,7 +77,25 @@
 
     </article>
 
-  </main>
+  </main> -->
+  <script id="address-template" type="text/x-handlebars-template">
+      {{#each Data}}
+           <article data-author="{{author}}" data-category="{{category}}"}>
+             <h1 class="title">{{title}}</h1>
+             <p class="authorInfo">By
+               <a class="author" href="{{authorurl}}">{{author}}</a>
+               published about <span class="postDays">{{diffDays}}</span>days ago
+             </p>
+             <p class='cat'>{{category}}</p>
+             <div class="content">
+               {{{body}}}
+               <a class="read-more" href="">Read More</a>
+             </div>
+             <hr>
+          </article>
+      {{/each}}
+  </script>
+   <main></main>
     <section>
       My name is Yueyue.
     </section>
