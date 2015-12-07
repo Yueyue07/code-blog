@@ -2,47 +2,63 @@
 <html>
   <head>
     <div class="headcontainer">
-      <meta charset="utf-8">
+
+       <meta name="viewport" content="width=device-width, initial-scale=1">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-      <script src="node_modules/marked/lib/marked.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.js"></script>
+      <script src="script/testmarkdown.js"></script>
       <!-- <link rel="stelysheet" type="text/css" href="css/Skeleton-2.0.4/css/skeleton.css">
       <link rel="stelysheet" type="text/css" href="css/Skeleton-2.0.4/css/normalize.css"> -->
       <!-- <link rel="stylesheet" type="text/css" href="css/styles.css"> -->
       <title></title>
   </head>
   <body>
+            <form id="article" action="#" method="POST" enctype="multipart/form-data">
+                <div class="row">
+                    <label for="email">Title:</label><br/>
+                    <input id="title" name="title" type="text" placeholder="title"/><br />
+                </div>
 
-    <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
-      <div class="row">
-          <label for="email">Title:</label><br />
-          <input class="input" name="email" type="text" value="" size="30" /><br />
-      </div>
-        <div class="row">
-            <label class="name">Author Name:</label><br />
-            <input id="name" class="input" name="name" type="text" value="" size="30" /><br />
-        </div>
-        <div class="row">
-            <label class="">AuthorUrl:</label><br />
-            <input class="input" name="email" type="text" value="" size="30" /><br />
-        </div>
-        <div class="row">
-            <label class="">Category:</label><br />
-            <input class="input" name="email" type="text" value="" size="30" /><br />
-        </div>
-        <div class="row">
-            <label class="">Publish Date:</label><br />
-            <input class="input" name="email" type="text" value="" size="30" /><br />
-        </div>
-        <div class="row">
-            <label class="articlebod">Body:</label><br />
-            <textarea id="body" class="input" name="message" rows="7" cols="30"></textarea><br />
-        </div>
-        <div class="row">
-            <label class="">Preview:</label><br />
-            <div id="preview" class="input" name="message" rows="7" cols="30"></div><br />
-        </div>
-        <input id="submit_button" type="submit" value="Send email" />
+                <div class="row">
+                    <label class="name">Author Name:</label><br />
+                    <input id="name" name="name" type="text" placeholder="author"/><br />
+                </div>
+
+                <div class="row">
+                    <label class="">AuthorUrl:</label><br />
+                    <input id="authorUrl" name="authorUrl" type="text" placeholder="author URL"/><br />
+                </div>
+<!--
+                  <div class="row">
+                      <label class="">Category:</label><br />
+                      <input class="input" name="email" type="text" value="" size="30" /><br />
+                  </div>
+                  <div class="row">
+                      <label class="">Publish Date:</label><br />
+                      <input class="input" name="email" type="text" value="" size="30" /><br />
+                  </div> -->
+                  <div class="row">
+                      <label class="articlebod">Body:</label><br />
+                      <textarea id="body" class="input" name="message" rows="7" cols="30"></textarea><br />
+                  </div>
+                  <div class="row">
+                      <label class="">Preview:(click to preview the contenct you type)</label><br />
+                      <div id="preview" class="input" name="message" rows="7" cols="30"></div><br />
+                  </div>
+                  <div class="row">
+                      <label class="">Preview:(click to preview the JSON for the new article)</label><br />
+                      <div id="jsondata" ></div><br />
+                  </div>
+                  <button id="submitbutton" type="button">Click Me!</button>
+           </form>
+
+        <!-- .submit for form  -->
+        <!-- .change;.blur -->
+        <!--  markeddown for body-->
+        <!--export-->
+        <!-- $('pre code').each(function(index,block){
+          hljs.highlightBlock(block);
+        }) -->
     </form>
 
 
