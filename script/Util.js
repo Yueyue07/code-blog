@@ -59,6 +59,19 @@ util.about = function() {
   });
 };
 
+util.stat = function() {
+  $('#statusHome').on('click', function(event){
+    console.log(event);
+
+    event.preventDefault();
+    $('main').hide();
+    $('.bio').hide();
+    $('select').hide();
+    $('.status').show();
+  });
+};
+
+
 util.hambMenu = function() {
   $('button').click(function(){
 
@@ -84,6 +97,7 @@ $(document).ready(function(){
     util.findAuthorArticleList();
     util.findCategoryList();
     util.hambMenu();
+    util.stat();
     console.log('success');
   });
 });
