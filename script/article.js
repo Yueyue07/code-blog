@@ -13,32 +13,33 @@ function Article(props,i) {
 
 Article.prototype.toHTML = function () {
     //Copy #template artible with clone
-    var $articleTemplate = $('#template').clone().attr('id','template' + '_' + this.i);
+  var $articleTemplate = $('#template').clone().attr('id','template' + '_' + this.i);
 
-        $articleTemplate.attr('data-author',this.author);
+  $articleTemplate.attr('data-author',this.author);
 
-        $articleTemplate.attr('data-category',this.category);
+  $articleTemplate.attr('data-category',this.category);
 
     //insert title
-    $articleTemplate.find('.title').html(this.title);
+  $articleTemplate.find('.title').html(this.title);
     // insert author
-    $articleTemplate.find('.author').html(this.author);
+  $articleTemplate.find('.author').html(this.author);
     //insert category
-    $articleTemplate.find('.cat').html(this.category);
+  $articleTemplate.find('.cat').html(this.category);
     //past date
-    var pastdate = new Date(this.publishedOn);
-    var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
+
+  var pastdate = new Date(this.publishedOn);
+  var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
     //current date
-    var currentdate = new Date();
-    var diffDays = Math.round(Math.abs((currentdate - pastdate )/(oneDay)-1));
+  var currentdate = new Date();
+  var diffDays = Math.round(Math.abs((currentdate - pastdate )/(oneDay)-1));
     //insert post days
-    $articleTemplate.find('.postDays').html(diffDays);
+  $articleTemplate.find('.postDays').html(diffDays);
     //insert link to author
-    $articleTemplate.find('a.author').attr("href",this.authorUrl);
+  $articleTemplate.find('a.author').attr("href",this.authorUrl);
     // insert body
-    $articleTemplate.find('.content').prepend(this.body);
+  $articleTemplate.find('.content').prepend(this.body);
     //insert read me link
     //append to main tag
-    $articleTemplate.appendTo('main');
+  $articleTemplate.appendTo('main');
 
 }
