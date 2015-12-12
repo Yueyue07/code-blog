@@ -1,44 +1,23 @@
-function Article(props,i) {
-  this.title = props.title;
-  this.category = props.category;
-  this.author = props.author;
-  this.authorUrl = props.authorUrl;
-  this.publishedOn = props.publishedOn;
-  this.body = props.body;
-  this.author = props.author;
-  this.category = props.category;
-  this.i = i;
+function Article (opts) {
+  this.author = opts.author;
+  this.authorUrl = opts.authorUrl;
+  this.title = opts.title;
+  this.category = opts.category;
+  this.markdown = opts.markdown;
+  this.body = opts.body || marked(this.markdown);
+  this.publishedOn = opts.publishedOn;
 }
 
+Article.prototype.toHtml = function() {
+  var sourceText = $('#article-template').text();
+  var template = Handlebars.compile(sourceText);
 
-Article.prototype.toHTML = function () {
-    //Copy #template artible with clone
-    var $articleTemplate = $('#template').clone().attr('id','template' + '_' + this.i);
+  this.daysAgo =
+   parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
 
-        $articleTemplate.attr('data-author',this.author);
+  this.publishStatus = this.publishedOn ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
+  this.authorSlug = util.slug(this.author);
+  this.categorySlug = util.slug(this.category);
 
-        $articleTemplate.attr('data-category',this.category);
-
-    //insert title
-    $articleTemplate.find('.title').html(this.title);
-    // insert author
-    $articleTemplate.find('.author').html(this.author);
-    //insert category
-    $articleTemplate.find('.cat').html(this.category);
-    //past date
-    var pastdate = new Date(this.publishedOn);
-    var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
-    //current date
-    var currentdate = new Date();
-    var diffDays = Math.round(Math.abs((currentdate - pastdate )/(oneDay)-1));
-    //insert post days
-    $articleTemplate.find('.postDays').html(diffDays);
-    //insert link to author
-    $articleTemplate.find('a.author').attr("href",this.authorUrl);
-    // insert body
-    $articleTemplate.find('.content').prepend(this.body);
-    //insert read me link
-    //append to main tag
-    $articleTemplate.appendTo('main');
-
-}
+  return template(this);
+};

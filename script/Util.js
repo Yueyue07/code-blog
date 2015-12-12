@@ -1,4 +1,14 @@
 var util = {};
+
+
+util.slug = function(str) {
+  return str.replace(/\W/g, '-');
+};
+
+util.today = function() {
+  return (new Date()).toISOString().slice(0,10);
+};
+
 util.truncateArticles = function() {
 
   $('div.content p:not(:first-child)').hide();
@@ -66,8 +76,8 @@ util.hambMenu = function() {
 }
 
 $(document).ready(function(){
-  blog.sortRawData();
-  blog.createContent();
+  // blog.sortRawData();
+  // blog.createContent();
   util.about();
   util.truncateArticles();
   util.findAuthorArticleList();

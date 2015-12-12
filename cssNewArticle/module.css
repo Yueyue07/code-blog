@@ -1,0 +1,32 @@
+.main-nav {
+  padding: .01em;
+  position:relative;
+  top:62%;
+}
+
+.main-nav:hover ul {
+  display: block;
+}
+
+.main-nav ul {
+  display: none;
+  padding: 0;
+  list-style: none;
+  clear: both;
+}
+
+.main-nav ul li {
+  margin-right: .4em;
+  font-size: 1.5em;
+  padding: .5em .2em;
+  border-bottom: 1px solid #ccc;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #fff;
+}
+article {
+  margin: 2% auton;
+  width: 100%;
+}
