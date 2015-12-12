@@ -81,14 +81,74 @@ util.hambMenu = function() {
 
 };
 
+util.fetchArticles = function(data, message, xhr) {
+
+  var eTag = xhr.getResponseHeader('eTag');
+  if (typeof localStorage.articlesEtag == 'undefined' || localStorage.articlesEtag != eTag) {
+    console.log('cache miss!');
+    localStorage.articlesEtag = eTag;
+    blog.rawData = [];
+    util.fetchJSON();
+  }
+};
+
+util.fetchJSON = function() {
+  $.getJSON('js/hackerIpsum.json', util.updateFromJSON);
+};
+
+
+// $.getJSON('js/hackerIpsum.json',function (data) {
+//   // Iterate over new article JSON:
+// //   data.forEach(function(item) {
+// //     // blog.rawData.push(item);});
+// //     console.log(item);
+// // }
+//  console.log(typeof data[0]);})
+
+
+
+util.updateFromJSON = function (data) {
+  // Iterate over new article JSON:
+  data.forEach(function(item) {
+    // Instantiate an article based on item from JSON:
+    // blog.rawData=[];
+    // Add the article to blog.articles
+    var article = new Article(item);
+    blog.rawData.push(article);
+
+  });
+  util.initArticles();
+};
+
+util.initArticles = function() {
+  util.sortArticles();
+
+  // Only render if the current page has somewhere to put all the articles
+  if ($('#articles').length) {
+    util.render();
+  }
+};
+
+util.sortArticles = function() {
+  blog.rawData.sort(function(a,b) {
+    return a.publishedOn < b.publishedOn;
+  });
+};
+
+
 $(document).ready(function(){
-  $.get('js/template.handlebars',function(data){
-    // console.log(typeof data);
-    //console.log(articleTempl.handlerTempScrip = Handlebars.compile(data));
+  $.get('js/template.handlebars',function(data,message,xhr){
     articleTempl.handlerTempScrip = Handlebars.compile(data);
+    console.log(message);
+    $.ajax({
+      type: 'HEAD',
+      url: 'js/hackerIpsum.json',
+      success: util.fetchArticles
+    });
   }).done(function() {
-    blog.sortRawData();
-    blog.createContent();
+    // checkForNewArticles
+    // blog.sortRawData();
+    // blog.createContent();
     articleTempl.JSONformat();
     articleTempl.handlerTemplate();
 
