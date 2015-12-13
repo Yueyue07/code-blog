@@ -2,10 +2,10 @@
 // $('#body').on('change', ).html();
 var preview = function() {
   $('input#title').on('change', function(event){
-      event.preventDefault();
-      var titlevalue = marked($(this).val());
-      $('#preview').append('title: ' + titlevalue);
-    });
+    event.preventDefault();
+    var titlevalue = marked($(this).val());
+    $('#preview').append('title: ' + titlevalue);
+  });
 
   $('input#name').on('change', function(event){
       event.preventDefault();
