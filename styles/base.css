@@ -1,0 +1,64 @@
+main {
+  margin: auto;
+  width: 90%;
+}
+
+address {
+  display: inline-block;
+}
+
+hr {
+  margin: 1em;
+  width: 80%;
+  border-color: #fff;
+}
+
+a, a:link, a:active {
+  text-decoration: none;
+  color: #777;
+}
+
+a:hover, a:focus {
+  color: #29506D;
+}
+
+a:visited {
+}
+
+label {
+  font-size: 3em;
+}
+
+input {
+  width: 100%;
+  margin: .5em 0;
+  border: 1px solid #ccc;
+  border-width: 0 0 1px 0;
+  border-radius: 0;
+}
+
+input[type="checkbox"] {
+  width: .28em;
+  height: .28em;
+  font-size: 3em;
+}
+
+textarea {
+  width: 100%;
+  margin: .5em 0;
+  font-size: 2em;
+  border: 1px solid #ccc;
+  border-radius: 0;
+}
+
+input:invalid, textarea:invalid {
+  border-color: #AE3F3C;
+}
+
+input:valid, textarea:valid {
+  border-color: #89CB8E;
+}
+
+footer {
+  margin-top: 3em;
+}

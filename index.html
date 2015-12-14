@@ -1,78 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-      <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"> </script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
-      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-      <link rel="stylesheet" type="text/css" href="css/normalize.css">
-      <link rel="stylesheet" type="text/css" href="css/base.css">
-      <link rel="stylesheet" type="text/css" href="css/layout.css">
-      <link rel="stylesheet" type="text/css" href="css/index.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-      <script src="script/blog.js"></script>
-      <script src="script/article.js"></script>
-      <script src="script/articleHdbrTemp.js"></script>
-      <script src="script/FilterList.js"></script>
-      <script src="script/blogArticles.js"></script>
-      <script src="script/Util.js"></script>
-      <script src="script/blogStatus.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog</title>
+    <link rel="stylesheet" href="vendor/styles/normalize.css">
+    <link rel="stylesheet" href="styles/icons.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/modules.css">
+    <link rel="stylesheet" href="vendor/styles/railscasts.css">
+
   </head>
   <body>
-    <header>
-      <div class="head">
-        <div class='menu'>
-            <button><i class="fa fa-bars"></i></button>
-            <nav style="display:none">
-              <ul class="nav nav-pills">
-                 <li id="home" role="presentation"><a href="index.html"><i class="fa fa-home fa-fw"></i>&nbsp; Home</a></li>
-                 <li role="presentation" id="about"><a href="index.html"><i class="fa fa-user"></i>&nbsp; About</a></li>
-                 <li role="presentation" id="statusHome"><a href="index.html"><i class="fa fa-star"></i>&nbsp; Status</a></li>
-                 <li role="presentation"><a href="https://github.com/Yueyue07"><i class="fa fa-github"></i>&nbsp; Github</a></li>
-                 <li role="presentation"><a href="https://www.linkedin.com/profile/view?id=AAMAAAzN520B-kb4dEtUz6j-N0f0bitN6UPq9UA&trk=hp-identity-photo"><i class="fa fa-linkedin"></i>&nbsp; Linkedin</a></li>
-              </ul>
-            </nav>
-       </div>
-          <div class="container">
-             <h1>Yueyue Qin's Blog</h1>
-             <p>You will love the post articles of this page. </p>
-          </div>
-      </div>
+    <header class="site-header clearfix">
+      <section class="heading-group-h1">
+        <h1>
+          Yueyue Qin Blog!
+        </h1>
+        <h2>Welcome to my Blog! You are gonna love it! Cheers!</h2>
+      </section>
+      <nav class="main-nav">
+        <div class="icon-menu"></div>
+        <ul>
+          <li class="tab" data-content="articles"><a href="#" class="icon-home"> Home</a></li>
+          <li class="tab" data-content="about"><a href="#" class="icon-address-book"> About</a></li>
+          <li><a href="https://twitter.com/YueyueQin" target="_blank" class="icon-twitter3"> Twitter</a></li>
+          <li><a href="https://github.com/Yueyue07" target="_blank" class="icon-github"> GitHub</a></li>
+        </ul>
+      </nav>
+    </header>
 
-      <div class="row">
-        <div class="col-md-6">
-           <select class="authorList">
-                  <option value="" class="default" >--Filter By Author--</option>
-           </select>
+    <main>
+      <section id="articles" class="tab-content">
+        <div>
+          <ul id="filters">
+            <li>
+              <select id="author-filter">
+                <option value="">-- Filter by Authors --</option>
+              </select>
+            </li>
+            <li>
+              <select id="category-filter">
+                <option value="">-- Filter by Categories --</option>
+              </select>
+            </li>
+          </ul>
         </div>
-        <div class="col-md-6">
-          <select class="catList">
-            <option value="" class="default" >--Filter By Category--</option>
-         </select>
-      </div>
-      </div>
-  </header>
-   <main></main>
-    <section class="bio">
-      My name is Yueyue.
-    </section>
+      </section>
+      <section id="about" class="tab-content">
+        <header>
+          Welcome to my Blog
+        </header>
+        <section>
+          <h1>Some of my interests:</h1>
+          <ul>
+            <li>Coding</li>
+            <li>Sharing what I've learned</li>
+            <li>Hanging with my family</li>
+          </ul>
+        </section>
+      </section>
+    </main>
+    <footer>
+      &copy; 2015 Code Fellows | Static Blog | Happy Ipsum!
+    </footer>
 
-    <section class="status">
-         <p class="numArt">a</p>
-         <p class="numAut"></p>
-         <p class="numWords"></p>
-         <p class="aveLe"></p>
-         <ul class="lenByAut">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src="vendor/scripts/highlight.pack.js"></script>
+    <script src="vendor/scripts/marked.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/5.0.2/markdown-it.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="scripts/util.js"></script>
+    <script src="scripts/article.js"></script>
+    <script src="scripts/blog.js"></script>
+    <script src="scripts/blogArticles.js"></script>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/new.js"></script>
 
-         </ul>
-
-
-    </section>
-
-    <!-- <script src="js/js-get.js"></script> -->
   </body>
 </html>
