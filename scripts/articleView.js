@@ -35,6 +35,8 @@ articleView.render = function(article) {
 };
 
 articleView.Byid = function(data){
+  console.log(data[0]);
+  console.log(data);
   var article = data[0];
   var _renderByid = function() {
     $articles = $('#articles');

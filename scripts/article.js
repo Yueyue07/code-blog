@@ -87,12 +87,8 @@ Article.find = function(id, callback) {
       {
         'sql': 'SELECT * FROM articles WHERE id = ?',
         'data': [id]
-        //'data': [id]
       }
     ],
-    // function(data) {
-    //   callback(new Article(data));
-    // }
     callback
   );
 };

@@ -12,15 +12,16 @@
     <link rel="stylesheet" href="/styles/modules.css">
     <link rel="stylesheet" href="/vendor/styles/railscasts.css">
     <link rel="stylesheet" href="http://css-spinners.com/css/spinner/throbber.css" type="text/css">
-
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   </head>
   <body>
     <header class="site-header clearfix">
       <section class="heading-group-h1">
         <h1 class="site-title">
-          Kilovolt Blog!
+          Yueyue's Blog!
         </h1>
-        <h2>The shocking power of static pages</h2>
+        <h2>Welcome to my blog!</h2>
       </section>
       <nav class="main-nav">
         <div class="icon-menu"></div>
@@ -42,12 +43,21 @@
           Welcome to my Blog
         </header>
         <section>
-          <h1>Some of my interests:</h1>
-          <ul>
-            <li>Coding</li>
-            <li>Sharing what I've learned</li>
-            <li>Hanging with my family</li>
-          </ul>
+          <div class="panel panel-default">
+            <div class="table-responsive panel-heading" style="text-align:center;font-size:1.5em">Github Repos Summary</div>
+             <table class="table">
+              <thead>
+                <tr>
+                  <th>Repo Name</th>
+                  <th>Update Date</th>
+                  <th>URL</th>
+                  <th>Language</th>
+                </tr>
+              </thead>
+              <tbody id="repos">
+              </tbody>
+            </table>
+          </div>
         </section>
       </section>
 
@@ -66,18 +76,21 @@
     <script src="/vendor/scripts/marked.js"></script>
     <script src="/vendor/scripts/highlight.pack.js"></script>
     <script src="/scripts/webdb.js"></script>
-
     <script src="/scripts/util.js"></script>
+    <script src="/scripts/githubToken.js"></script>
 
     <!-- Model: -->
     <script src="/scripts/article.js"></script>
+    <script src="/scripts/repos.js"></script>
 
     <!-- View: -->
     <script src="/scripts/articleView.js"></script>
+    <script src="/scripts/reposView.js"></script>
 
     <!-- Controller: -->
     <script src="/scripts/articlesController.js"></script>
     <script src="/scripts/aboutController.js"></script>
+    <script src="/scripts/reposController.js"></script>
 
     <!-- Router: -->
     <script src="/scripts/router.js"></script>
