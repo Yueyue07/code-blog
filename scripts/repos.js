@@ -6,7 +6,7 @@ repos.requestAll = function(callback){
   $.ajax({
     type: 'GET',
     url:'https://api.github.com/users/Yueyue07/repos?sort=pushed',
-    headers: { Authorization: 'token ' + githubToken}
+    headers: { Authorization: 'token ' + githubToken} // '/github/users/yueyue07/repos'
   }).done(function(data){
     console.log(data[0]);
     data.forEach(function(item){
