@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/vendor/styles/railscasts.css">
     <link rel="stylesheet" href="http://css-spinners.com/css/spinner/throbber.css" type="text/css">
     <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   </head>
   <body>
     <header class="site-header clearfix">
@@ -33,6 +33,23 @@
         </ul>
       </nav>
     </header>
+
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+           <select class="authorList">
+                  <option value="" class="default" >--Filter By Author--</option>
+           </select>
+        </div>
+        <div class="col-md-6">
+          <select class="catList">
+            <option value="" class="default" >--Filter By Category--</option>
+         </select>
+        </div>
+      </div>
+   </div>
+
 
     <main>
       <section id="articles" class="tab-content">

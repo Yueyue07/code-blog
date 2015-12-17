@@ -113,4 +113,8 @@ article {
     color: #7493A7;
   }
 
+  .container-fluid{
+    margin: 30px 0;
+  }
+
 }
