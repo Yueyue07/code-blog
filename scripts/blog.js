@@ -26,8 +26,8 @@ blog.fetchArticles = function(data, message, xhr) {
       , blog.fetchJSON);
   } else {
     console.log('cache hit!');
-    blog.articles = [];
-    blog.fetchFromDB();
+    blog.fetchFromDB(blog.initArticles);
+    console.log('fetch databse');
   }
 };
 
@@ -59,14 +59,17 @@ blog.fetchFromDB = function(callback) {
   webDB.execute(
     'SELECT * FROM articles ORDER BY publishedOn DESC;',
     function (resultArray) {
+      blog.articles = [];
       resultArray.forEach(function(ele) {
         blog.articles.push(new Article(ele));
-      });
 
+      });
+      console.log('init articles');
+      // blog.initArticles();
+      callback();
     }
   );
-  blog.initArticles();
-  callback();
+
 };
 
 blog.initArticles = function() {
@@ -85,13 +88,13 @@ blog.sortArticles = function() {
 blog.render = function() {
 
   // Get all articles from the DB to render:
-  webDB.execute(
-    // TODO: Add SQL here...
-    'SELECT * FROM articles ORDER BY publishedOn DESC;',
-    function(results) {
-      results.forEach(function(ele) { blog.appendArticle(ele); });
-    });
-
+  // webDB.execute(
+  //   // TODO: Add SQL here...
+  //   'SELECT * FROM articles ORDER BY publishedOn DESC;',
+  //   function(results) {
+  //     results.forEach(function(ele) { blog.appendArticle(ele); });
+  //   });
+  blog.articles.forEach(function(ele) { blog.appendArticle(ele);});
   $('pre code').each(function(i, block) {
     hljs.highlightBlock(block);
   });
