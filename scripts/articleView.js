@@ -56,3 +56,25 @@ articleView.Byid = function(data){
   }
 
 };
+
+articleView.show = function(articles) {
+
+  var _renderAll = function() {
+    $articles = $('#articles');
+    $articles.hide().fadeIn().siblings().hide();
+    $articles.children().hide();
+    $('#spinner').hide();
+    articles.forEach(function(article) {
+      $articles.append(articleView.render(article));
+    });
+  };
+
+  if (articleView.template) { // if htere is articleView.template
+    _renderAll(); // run _renderAll() function
+  } else {
+    $.get('/templates/article.html', function(data, msg, xhr) {
+      articleView.template = Handlebars.compile(data);
+      _renderAll();
+    });
+  }
+};

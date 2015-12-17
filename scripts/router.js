@@ -11,4 +11,16 @@ page('/articles/:id', function(id){
   articlesController.Byid(ID);
 });
 
+// page('/category/:category',function(data){
+//   console.log(data);
+//   console.log(data.params.category);
+//   var category = data.params.category;
+//   articlesController
+// })
+
+page('/category/:category',
+   articlesController.category,
+   articlesController.show
+);
+
 page.start(); // don't go to browser; get content from the callback function

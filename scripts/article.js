@@ -93,6 +93,19 @@ Article.find = function(id, callback) {
   );
 };
 
+Article.findByCategory = function(category,callback) {
+  callback = callback || function() {};
+  webDB.execute(
+    [
+      {
+        'sql': 'SELECT * FROM articles WHERE category = ?',
+        'data': [category]
+      }
+    ],
+    callback
+  );
+};
+
 Article.truncateTable = function(callback) {
   // Delete all records from given table.
   webDB.execute('DELETE FROM articles;',
