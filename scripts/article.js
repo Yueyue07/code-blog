@@ -60,7 +60,8 @@ Article.requestAll = function(next, callback) {
 };
 
 Article.loadAll = function(callback) {
-  var callback = callback || function() {};
+  callback = callback || function() {};
+
 
   if (Article.all.length === 0) {
     webDB.execute('SELECT * FROM articles ORDER BY publishedOn DESC;',
@@ -98,8 +99,21 @@ Article.findByCategory = function(category,callback) {
   webDB.execute(
     [
       {
-        'sql': 'SELECT * FROM articles WHERE category = ?',
+        'sql': 'SELECT * FROM articles WHERE category = ? ORDER BY publishedON DESC',
         'data': [category]
+      }
+    ],
+    callback
+  );
+};
+
+Article.findByAuthor = function(author,callback) {
+  callback = callback || function() {};
+  webDB.execute(
+    [
+      {
+        'sql': 'SELECT * FROM articles WHERE author = ? ORDER BY publishedON DESC',
+        'data': [author]
       }
     ],
     callback

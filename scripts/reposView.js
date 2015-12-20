@@ -4,6 +4,8 @@ reposView.ui = function() {
   var $about = $('#about');
   $('#articles').hide();
   $('#spinner').hide();
+  $('#author-filter').hide();
+  $('#category-filter').hide();
   $('#repos').empty();
   $about.fadeIn().siblings().hide();
 };

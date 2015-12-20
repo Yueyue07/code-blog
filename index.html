@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Blog</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab|Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="/vendor/styles/normalize.css">
     <link rel="stylesheet" href="/styles/icons.css">
     <link rel="stylesheet" href="/styles/base.css">
@@ -13,11 +14,11 @@
     <link rel="stylesheet" href="/vendor/styles/railscasts.css">
     <link rel="stylesheet" href="http://css-spinners.com/css/spinner/throbber.css" type="text/css">
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
   </head>
   <body>
     <header class="site-header clearfix">
-      <section class="heading-group-h1">
+      <!-- <section class="heading-group-h1">
         <h1 class="site-title">
           Yueyue's Blog!
         </h1>
@@ -27,35 +28,68 @@
         <div class="icon-menu"></div>
         <ul>
           <li><a href="/" class="icon-home"> Home</a></li>
-          <li><a href="/about" class="icon-address-book"> About</a></li>
+          <li><a href="/about" class="icon-address-book">About</a></li>
           <li><a href="https://twitter.com/YueyueQin" target="_blank" class="icon-twitter3"> Twitter</a></li>
           <li><a href="http://github.com/Yueyue07" target="_blank" class="icon-github"> GitHub</a></li>
         </ul>
+      </nav> -->
+       <nav class="navbar navbar-inverse navbar-fixed-top">
+         <div class="container">
+             <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                 <span class="sr-only">Toggle navigation</span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand" href="#">Yueyue's Home</a>
+             </div>
+            <div id="navbar" class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="/" class="icon-home"> Home</a></li>
+                <li><a href="/about" class="icon-address-book"> About</a></li>
+                <li><a href="https://twitter.com/YueyueQin" target="_blank" class="icon-twitter3"> Twitter</a></li>
+                <li><a href="http://github.com/Yueyue07" target="_blank" class="icon-github"> GitHub</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+        </div>
       </nav>
     </header>
+
+ <div class="jumbotron">
+   <div class="container">
+     <h1 class="site-title">
+       Yueyue's Blog!
+     </h1>
+     <h2>Welcome to my blog!</h2>
+   </div>
+ </div>
+
 
 
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-6">
-           <select class="authorList">
-                  <option value="" class="default" >--Filter By Author--</option>
-           </select>
+        <div class="col-md-6 author">
+          <select id="author-filter">
+            <option value="" class="default">---Filter By Author---</option>
+          </select>
         </div>
-        <div class="col-md-6">
-          <select class="catList">
-            <option value="" class="default" >--Filter By Category--</option>
+        <div class="col-md-6 category">
+          <select id="category-filter">
+            <option value="" class="default" >---Filter By Category---</option>
          </select>
         </div>
       </div>
    </div>
+
+   <hr>
 
 
     <main>
       <section id="articles" class="tab-content">
         <div id="spinner"><div class="throbber-loader">Loading…</div> Loading articles...</div>
       </section>
-      <section id="about" class="tab-content">
+      <section id="about" class="tab-content" style="display:none">
         <header>
           Welcome to my Blog
         </header>
@@ -90,6 +124,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src="/vendor/scripts/bootstrap.min.js"></script>
     <script src="/vendor/scripts/page.js"></script>
     <script src="/vendor/scripts/html5sql.js"></script>
     <script src="/vendor/scripts/marked.js"></script>
