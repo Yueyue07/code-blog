@@ -42,14 +42,10 @@ blog.updateFromJSON = function (data) {
     // Instantiate an article based on item from JSON:
     var article = new Article(item);
 
-    // Add the article to blog.articles
-    blog.articles.push(article);
-
     article.insertRecord();
 
   });
-  blog.sortArticles();
-  blog.initArticles();
+  blog.fetchFromDB(blog.initArticles);
 };
 
 blog.fetchFromDB = function(callback) {
@@ -65,7 +61,6 @@ blog.fetchFromDB = function(callback) {
 
       });
       console.log('init articles');
-      // blog.initArticles();
       callback();
     }
   );
@@ -86,14 +81,6 @@ blog.sortArticles = function() {
 };
 
 blog.render = function() {
-
-  // Get all articles from the DB to render:
-  // webDB.execute(
-  //   // TODO: Add SQL here...
-  //   'SELECT * FROM articles ORDER BY publishedOn DESC;',
-  //   function(results) {
-  //     results.forEach(function(ele) { blog.appendArticle(ele); });
-  //   });
   blog.articles.forEach(function(ele) { blog.appendArticle(ele);});
   $('pre code').each(function(i, block) {
     hljs.highlightBlock(block);
@@ -104,7 +91,7 @@ blog.render = function() {
 };
 
 blog.appendArticle = function(a) {
-  $('#articles').append((new Article(a)).toHtml());
+  $('#articles').append(a.toHtml());
 };
 
 blog.isAdmin = function () {
@@ -116,7 +103,8 @@ blog.isAdmin = function () {
 };
 
 blog.setTeasers = function() {
-  $('.article-body').children(':nth-child(n+2)').hide();
+
+  $('.article-body').children().not(':first').hide();
   $('#articles').on('click', 'a.read-on', function(e) {
     e.preventDefault();
     $(this).parent().find('.edit-btn').show();
@@ -178,7 +166,7 @@ blog.handleMainNav = function() {
 };
 
 blog.initNewArticlePage = function() {
-  $.get('templates/article.handlebars', function(data, msg, xhr) {
+  $.get('../templates/article.handlebars', function(data, msg, xhr) {
     Article.prototype.template = Handlebars.compile(data);
   }).done(function(){
     $('.tab-content').show();
