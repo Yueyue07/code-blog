@@ -2,20 +2,19 @@ var articleView = {};
 
 articleView.show = function(articles) {
   articleView.loadTemplate(articles);
-  articleView.categoryUrl();
-  articleView.authorUrl();
+  articleView.selectUrl();
 
 };
 
 articleView.loadTemplate = function(articles) {
   if (articleView.template){
     articleView.renderGroup(articles);
-    articleView.categoryUrl();
+    articleView.selectUrl();
   }else{
     $.get('/templates/article.html',function(data, msg, xhr) {
       articleView.template = Handlebars.compile(data);
       articleView.renderGroup(articles);
-      articleView.categoryUrl();
+      articleView.selectUrl();
     });
   }
 };
@@ -90,26 +89,24 @@ articleView.Filter = function(){
   });
 };
 
-articleView.categoryUrl = function() {
-  $('#category-filter').on('change', function() {
-    if ($(this).val()) {
-      page('/category/' + $(this).val());
-    } else {
-      page('/');
-    }
-    console.log('url done');
-    $('#author-filter').val('');
-  });
-};
-
-articleView.authorUrl = function() {
+articleView.selectUrl = function() {
   $('#author-filter').on('change', function() {
     if ($(this).val()) {
       page('/author/' + $(this).val());
     } else {
       page('/');
     }
-    console.log('url done');
+    console.log('author url done');
     $('#category-filter').val('');
+  });
+
+  $('#category-filter').on('change', function() {
+    if ($(this).val()) {
+      page('/category/' + $(this).val());
+    } else {
+      page('/');
+    }
+    console.log('category url done');
+    $('#author-filter').val('');
   });
 };

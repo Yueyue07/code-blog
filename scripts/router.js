@@ -21,39 +21,4 @@ page('/author/:author',
    articlesController.show
 );
 
-page('/author/:author',
-function(data){console.log(data);}
-);
-// page('/category/:category',function(data){
-//   console.log(data);
-//   console.log(data.params.category);
-//   var category = data.params.category;
-//   articlesController
-// })
-
-
-
-// $('#author-filter').on(function(e){
-//   page('/user/12')
-//   e.preventDefault()
-// })
-
-// $('#author-filter').on('change',function(e){
-//   e.preventDefault();
-//   var author = $(this).val();
-//   console.log(author);
-//   page('/author/' + author);
-// });
-//
-// var author = 'AmaraLarkin';
-// page('/author/' + ':' + author, function(data){
-//   console.log(data.params[author]);
-// });
-
-
-// $('.author').click(function(event){
-//   event.preventDefault();
-//   page('/catgory')
-// })
-
 page.start(); // don't go to browser; get content from the callback function

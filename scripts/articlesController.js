@@ -23,11 +23,10 @@ articlesController.category = function (ctx,next) {
 
 articlesController.author = function (ctx,next) {
   var authorData = function(data) {
-    console.log(data);
+    console.log('author data');
     ctx.articles = data;
     next();
   };
-  console.log(ctx);
   console.log(ctx.params.author);
   Article.findByAuthor(ctx.params.author,authorData);
 
